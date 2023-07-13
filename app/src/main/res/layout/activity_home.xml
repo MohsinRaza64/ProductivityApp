@@ -63,6 +63,7 @@
 
     <ImageView
         android:id="@+id/imageViewMenuIcon"
+        android:onClick="onClickMenuIcon"
         android:layout_width="63dp"
         android:layout_height="65dp"
         android:layout_marginTop="30dp"
