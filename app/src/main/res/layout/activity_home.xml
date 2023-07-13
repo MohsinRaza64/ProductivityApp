@@ -10,10 +10,9 @@
     <ImageView
         android:id="@+id/imageViewNavBar"
         android:layout_width="411dp"
-        android:layout_height="112dp"
+        android:layout_height="111dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/nav_bar" />
 
@@ -82,24 +81,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/avatar" />
 
-    <ImageView
-        android:id="@+id/imageViewInstructions"
-        android:layout_width="241dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAppName"
-        app:srcCompat="@drawable/instructions" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewInstructions"-->
+<!--        android:layout_width="241dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageViewAppName"-->
+<!--        app:srcCompat="@drawable/instructions" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTasks"
         android:layout_width="match_parent"
-        android:layout_height="426dp"
+        android:layout_height="600dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/imageViewNavBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewInstructions" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAppName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

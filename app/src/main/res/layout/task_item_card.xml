@@ -4,15 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/darkBlue"
-    app:cardCornerRadius="20dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="25dp"
     app:cardElevation="4dp"
     app:cardUseCompatPadding="true">
 
     <!-- Customize the card content according to your needs -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardViewConstraintlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -21,19 +23,20 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/bike" />
+
         <ImageView
-            android:id="@+id/imageViewStatusTick"
+            android:id="@+id/imageViewStatus"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -44,10 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:textSize="26sp"
             android:fontFamily="@font/segoe_ui_bold"
-            android:textColor="@color/white"
             android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,10 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:textColor="@color/medPink"
-            android:textSize="15sp"
             android:fontFamily="@font/segoe_ui_bold"
             android:text="Time"
+            android:textColor="@color/medPink"
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
