@@ -38,9 +38,9 @@ class HomeActivity : AppCompatActivity() {
         val task2 = Task(
             "work",
             LocalTime.of(10, 0),
-            LocalTime.of(11, 0),
+            LocalTime.of(16, 0),
             R.drawable.bike,
-            false
+            true
         )
         taskList.add(task2)
     }
