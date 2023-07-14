@@ -87,9 +87,7 @@ class TaskAdapter(
                     statusImageView.setImageResource(R.drawable.cross)
                 }
             }
-
         }
-
     }
 
     override fun getItemCount(): Int {
