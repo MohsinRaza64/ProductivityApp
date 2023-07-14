@@ -9,6 +9,7 @@ class Task(
     var startTime: LocalTime,
     var endTime: LocalTime,
     var iconId: Int,
+    var iconIdW: Int,
     var status: Boolean,
     var taskId: Int? = taskList.size)
 //{

@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         var rvTasks = findViewById<RecyclerView>(R.id.rvTasks)
 
-        populateTasks()
+
         val adapter = TaskAdapter(taskList)
         rvTasks.adapter = adapter
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
@@ -32,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
             LocalTime.of(9, 0),
             LocalTime.of(10, 0),
             R.drawable.bike,
+            R.drawable.bikew,
             true
         )
         taskList.add(task1)
@@ -40,9 +41,28 @@ class HomeActivity : AppCompatActivity() {
             LocalTime.of(10, 0),
             LocalTime.of(16, 0),
             R.drawable.bike,
+            R.drawable.bikew,
             true
         )
         taskList.add(task2)
+        val task3 = Task(
+            "Lunch",
+            LocalTime.of(16, 0),
+            LocalTime.of(16, 20),
+            R.drawable.bike,
+            R.drawable.bikew,
+            true
+        )
+        taskList.add(task3)
+        val task4 = Task(
+            "Development",
+            LocalTime.of(16, 20),
+            LocalTime.of(20, 0),
+            R.drawable.bike,
+            R.drawable.bikew,
+            true
+        )
+        taskList.add(task4)
     }
 
 
@@ -53,6 +73,7 @@ class HomeActivity : AppCompatActivity() {
         startActivity(Intent(this,SplashScreen::class.java))
     }
     fun onAddButtonClick(view: View){
+        populateTasks()
         startActivity(Intent(this,SplashScreen::class.java))
     }
     fun onSettingButtonClick(view: View){

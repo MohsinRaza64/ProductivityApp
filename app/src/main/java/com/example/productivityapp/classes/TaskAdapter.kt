@@ -30,37 +30,25 @@ class TaskAdapter(
         val titleTextView = holder.itemView.findViewById<TextView>(R.id.titleTextView)
         val startTimeTextView = holder.itemView.findViewById<TextView>(R.id.timeTextView)
         val statusImageView = holder.itemView.findViewById<ImageView>(R.id.imageViewStatus)
+        val iconImageView = holder.itemView.findViewById<ImageView>(R.id.imageViewTaskIcon)
+
         titleTextView.text = task.title
         startTimeTextView.text = task.startTime.toString()
+        iconImageView.setImageResource(task.iconId)
+        //Setting up alternate icon
 
+//
         val currentTime = LocalTime.now()
         val isCurrent = currentTime.isAfter(task.startTime) && currentTime.isBefore(task.endTime)
-//        if(isCurrent){
-//            constraintLayout.setBackgroundResource(R.drawable.pink_gradient);
-//            startTimeTextView.setTextColor(ContextCompat.getColor(startTimeTextView.context, R.color.white))
-//            val tickResourceId = R.drawable.tickw
-//            val crossResourceId = R.drawable.crossw
-//        } else {
-//            val tickResourceId = R.drawable.tick
-//            val crossResourceId = R.drawable.cross
-//        }
 //
-//
-//        //Handling Tick/Cross Icon Click.
-//        statusImageView.setOnClickListener{
-//            if(task.status == false){
-//                task.status = true
-//                statusImageView.setImageResource(tickResourceId)
-//            } else {
-//                task.status = false
-//                statusImageView.setImageResource(R.drawable.cross)
-//            }
-//        }
         if(isCurrent){
             constraintLayout.setBackgroundResource(R.drawable.pink_gradient);
             startTimeTextView.setTextColor(ContextCompat.getColor(startTimeTextView.context, R.color.white))
+            iconImageView.setImageResource(task.iconIdW)
             if(task.status)
-            statusImageView.setImageResource(R.drawable.tickw)
+
+                statusImageView.setImageResource(R.drawable.tickw)
+
             else statusImageView.setImageResource(R.drawable.crossw)
 
             statusImageView.setOnClickListener{
@@ -74,6 +62,7 @@ class TaskAdapter(
             }
 
         } else {
+            iconImageView.setImageResource(task.iconId)
             if (task.status)
                 statusImageView.setImageResource(R.drawable.tick)
             else statusImageView.setImageResource(R.drawable.cross)
