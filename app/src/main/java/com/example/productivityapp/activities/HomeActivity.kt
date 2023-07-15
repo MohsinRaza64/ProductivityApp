@@ -56,8 +56,8 @@ class HomeActivity : AppCompatActivity() {
         taskList.add(task3)
         val task4 = Task(
             "Development",
-            LocalTime.of(16, 20),
-            LocalTime.of(20, 0),
+            LocalTime.of(16,20, ),
+            LocalTime.of(20, 50),
             R.drawable.bike,
             R.drawable.bikew,
             true
@@ -74,7 +74,7 @@ class HomeActivity : AppCompatActivity() {
     }
     fun onAddButtonClick(view: View){
         populateTasks()
-        startActivity(Intent(this,SplashScreen::class.java))
+        startActivity(Intent(this,CreateTaskActivity::class.java))
     }
     fun onSettingButtonClick(view: View){
         startActivity(Intent(this,SplashScreen::class.java))

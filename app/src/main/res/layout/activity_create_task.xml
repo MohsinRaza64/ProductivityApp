@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".activities.CreateTaskActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAppName"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="reStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/app_name" />
+
+    <ImageView
+        android:id="@+id/imageViewMenuIcon"
+        android:layout_width="63dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_button" />
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="63dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar" />
+
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:padding="15dp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Enter Title"
+        android:textColorHint="@color/grey"
+        android:inputType="text"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewMenuIcon" />
+
+    <EditText
+        android:id="@+id/startTimeEditText"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:gravity="center"
+        android:hint="Start Time"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
+
+    <ImageView
+        android:id="@+id/setStarttimeIcon"
+        android:onClick="setStartTime"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/startTimeEditText"
+        app:layout_constraintEnd_toEndOf="@+id/startTimeEditText"
+        app:layout_constraintTop_toTopOf="@+id/startTimeEditText"
+        app:srcCompat="@drawable/clock" />
+
+    <EditText
+        android:id="@+id/endTimeEditText"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:fontFamily="@font/segoe_ui_regular"
+        android:gravity="center"
+        android:hint="End Time"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeEditText" />
+
+    <ImageView
+        android:id="@+id/setEndtimeIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/endTimeEditText"
+        app:layout_constraintEnd_toEndOf="@+id/endTimeEditText"
+        app:layout_constraintTop_toTopOf="@+id/endTimeEditText"
+        app:srcCompat="@drawable/clock" />
+</androidx.constraintlayout.widget.ConstraintLayout>
