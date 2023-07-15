@@ -1,11 +1,13 @@
 package com.example.productivityapp.classes
 
+import java.io.FileDescriptor
 import java.time.LocalTime
 
 var taskList = mutableListOf<Task>()
 
 class Task(
     var title: String,
+    var description: String,
     var startTime: LocalTime,
     var endTime: LocalTime,
     var iconId: Int,

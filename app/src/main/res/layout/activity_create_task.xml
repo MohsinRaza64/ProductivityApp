@@ -138,16 +138,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SetIconTextView" />
 
-    <ImageView
-        android:id="@+id/adButton"
-        android:layout_width="63dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:srcCompat="@drawable/addws" />
-
     <TextView
         android:id="@+id/SetIconTextView"
         android:layout_width="wrap_content"
@@ -167,10 +157,20 @@
         app:layout_constraintBottom_toTopOf="@id/descriptionEditText"
         app:layout_constraintTop_toBottomOf="@id/endTimeEditText"
         app:layout_constraintEnd_toEndOf="@id/endTimeEditText"
-        android:onClick="setEndTime"
         app:srcCompat="@drawable/bike"
         tools:layout_editor_absoluteX="281dp"
         tools:layout_editor_absoluteY="311dp" />
+
+    <ImageView
+        android:id="@+id/adButton"
+        android:onClick="addDataToArray"
+        android:layout_width="63dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/addws" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
