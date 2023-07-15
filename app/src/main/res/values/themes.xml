@@ -26,4 +26,16 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="TimePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize the background color -->
+        <item name="android:windowBackground">@color/darkBlue</item>
+        <!-- Customize the text color of the time values -->
+        <item name="android:textColorPrimary">@color/darkBlue</item>
+        <!-- Customize the text color of the AM/PM labels -->
+        <item name="android:textColorSecondary">@color/darkBlue</item>
+        <item name="colorAccent">@color/medPink</item>
+        <item name="android:divider">@color/medPink</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:headerBackground">@color/medPink</item>
+    </style>
 </resources>

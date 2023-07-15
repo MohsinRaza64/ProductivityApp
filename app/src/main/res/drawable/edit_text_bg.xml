@@ -1,5 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="200dp" /> <!-- Set the radius value to control the roundness of corners -->
+    <corners android:radius="25dp" /> <!-- Set the radius value to control the roundness of corners -->
     <solid android:color="@color/darkBlue" />
     <stroke
         android:width="2dp"
