@@ -1,6 +1,7 @@
 package com.example.productivityapp.classes
 
 import java.io.FileDescriptor
+import java.io.Serializable
 import java.time.LocalTime
 
 var taskList = mutableListOf<Task>()
