@@ -1,7 +1,5 @@
 package com.example.productivityapp.classes
 
-import java.io.FileDescriptor
-import java.io.Serializable
 import java.time.LocalTime
 
 var taskList = mutableListOf<Task>()
@@ -14,7 +12,7 @@ class Task(
     var iconId: Int,
     var iconIdW: Int,
     var status: Boolean,
-    var taskId: Int? = taskList.size)
+    var taskId: Int = taskList.size)
 //{
 
 //    fun getStartTime(): Time {

@@ -1,14 +1,11 @@
 package com.example.productivityapp.activities
 
-import android.app.Activity
 import android.app.TimePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
 import com.example.productivityapp.R
 import com.example.productivityapp.classes.Task
 import java.time.LocalTime
@@ -45,6 +42,8 @@ class CreateTaskActivity : AppCompatActivity() {
 
     }
 
+
+
     fun setStartTime(view: View) {
         val currentTime = Calendar.getInstance()
         val initHour = currentTime.get(Calendar.HOUR_OF_DAY)
@@ -79,7 +78,8 @@ class CreateTaskActivity : AppCompatActivity() {
             true
         )
         taskList.add(task)
-//        Toast.makeText(applicationContext, "${task.title} ${task.taskId} ${task.status} ${task.endTime} ${task.iconId} ${task.startTime} ${task.iconIdW} ${task.description} ", Toast.LENGTH_SHORT).show()
+        /*
+        Toast.makeText(applicationContext, "${task.title} ${task.taskId} ${task.status} ${task.endTime} ${task.iconId} ${task.startTime} ${task.iconIdW} ${task.description} ", Toast.LENGTH_SHORT).show()
         val intent = Intent()
         intent.putExtra("title", title)
         intent.putExtra("description", description)
@@ -92,6 +92,7 @@ class CreateTaskActivity : AppCompatActivity() {
         intent.putExtra("status", true)
 
         setResult(RESULT_OK, intent)
+        */
         finish()
     }
 }
