@@ -1,9 +1,11 @@
 package com.example.productivityapp.classes
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.time.LocalTime
 
 var taskList = mutableListOf<Task>()
-
+@Entity(tableName = "tasks")
 class Task(
     var title: String,
     var description: String,
@@ -12,7 +14,8 @@ class Task(
     var iconId: Int,
     var iconIdW: Int,
     var status: Boolean,
-    var taskId: Int = taskList.size)
+    @PrimaryKey(autoGenerate = true)
+    var taskId: Int)
 //{
 
 //    fun getStartTime(): Time {

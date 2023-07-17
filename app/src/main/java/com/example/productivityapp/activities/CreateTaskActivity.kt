@@ -18,7 +18,6 @@ class CreateTaskActivity : AppCompatActivity() {
     private lateinit var descriptionEditTextm: EditText
     private lateinit var stEditText : EditText
     private lateinit var etEditText : EditText
-
     //Data variables
     lateinit var startTimeS : LocalTime
     lateinit var endTimeS : LocalTime
@@ -30,20 +29,17 @@ class CreateTaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_task)
 
+
+
         stEditText = findViewById(R.id.startTimeEditText)
         etEditText = findViewById(R.id.endTimeEditText)
         titleEditTextm = findViewById(R.id.titleEditText)
         descriptionEditTextm = findViewById(R.id.descriptionEditText)
 
-
         //Giving Default values in case user doesn't use the time pickers.
         startTimeS = LocalTime.of(0, 0)
         endTimeS = LocalTime.of(0, 0)
-
     }
-
-
-
     fun setStartTime(view: View) {
         val currentTime = Calendar.getInstance()
         val initHour = currentTime.get(Calendar.HOUR_OF_DAY)
@@ -53,7 +49,6 @@ class CreateTaskActivity : AppCompatActivity() {
             startTimeS = LocalTime.of(hour_of_day, minute)
         }, initHour, initMinute, true).show()
     }
-
     fun setEndTime(view: View) {
         val currentTime = Calendar.getInstance()
         val initHour = currentTime.get(Calendar.HOUR_OF_DAY)
@@ -75,24 +70,13 @@ class CreateTaskActivity : AppCompatActivity() {
             endTimeS,
             R.drawable.bike,
             R.drawable.bikew,
-            true
+            true,
+            1
         )
         taskList.add(task)
-        /*
-        Toast.makeText(applicationContext, "${task.title} ${task.taskId} ${task.status} ${task.endTime} ${task.iconId} ${task.startTime} ${task.iconIdW} ${task.description} ", Toast.LENGTH_SHORT).show()
-        val intent = Intent()
-        intent.putExtra("title", title)
-        intent.putExtra("description", description)
-        val startTimeString: String = startTimeS.toString()
-        intent.putExtra("startTimeS", startTimeString)
-        val endTimeString: String = endTimeS.toString()
-        intent.putExtra("endTimeS", endTimeString)
-        intent.putExtra("iconId", R.drawable.bike)
-        intent.putExtra("iconIdW", R.drawable.bikew)
-        intent.putExtra("status", true)
 
-        setResult(RESULT_OK, intent)
-        */
+        val intent = Intent(this@CreateTaskActivity, SplashScreen::class.java)
+        startActivity(intent)
         finish()
     }
 }
