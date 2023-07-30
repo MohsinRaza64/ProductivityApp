@@ -78,6 +78,8 @@ class CreateTaskActivity : AppCompatActivity() {
             true
         )
         taskList.add(task)
+        val intent = Intent(this@CreateTaskActivity, SplashScreen::class.java)
+        startActivity(intent)
         /*
         Toast.makeText(applicationContext, "${task.title} ${task.taskId} ${task.status} ${task.endTime} ${task.iconId} ${task.startTime} ${task.iconIdW} ${task.description} ", Toast.LENGTH_SHORT).show()
         val intent = Intent()
@@ -93,7 +95,7 @@ class CreateTaskActivity : AppCompatActivity() {
 
         setResult(RESULT_OK, intent)
         */
-        finish()
+//        finish()
     }
 }
 
